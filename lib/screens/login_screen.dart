@@ -45,7 +45,10 @@ class _LoginScreenState extends State<LoginScreen> {
       decoration: const InputDecoration(
         label: Text("Student Email"),
         hintText: "xxxxxxx",
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(50)),
+        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 16),
         suffix: Text("@student.cuet.ac.bd"),
       ),
       keyboardType: TextInputType.number,
@@ -56,7 +59,10 @@ class _LoginScreenState extends State<LoginScreen> {
     return TextFormField(
       decoration: const InputDecoration(
         label: Text("Password"),
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(50)),
+        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 16),
       ),
       obscureText: true,
       keyboardType: TextInputType.visiblePassword,
