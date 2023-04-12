@@ -1,3 +1,6 @@
-# cuet_book
+# CUETBook
+A social media app for CUETians
 
-A new Flutter project.
+## Contribution
+- Make small commits
+- Write commit messages in present tense
