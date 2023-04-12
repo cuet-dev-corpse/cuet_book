@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 formKey.currentState?.validate();
               },
               child: const Text("Login")),
-          const SizedBox(height: 64),
+          const SizedBox(height: 32),
         ],
       ),
     );
