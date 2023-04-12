@@ -8,6 +8,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,6 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Expanded(child: Container()),
           Form(
+            key: formKey,
             child: Column(
               children: [
                 emailField(),
@@ -33,7 +36,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           const SizedBox(height: 16),
-          FilledButton(onPressed: () {}, child: const Text("Login")),
+          FilledButton(
+              onPressed: () {
+                formKey.currentState?.validate();
+              },
+              child: const Text("Login")),
           const SizedBox(height: 64),
         ],
       ),
@@ -42,17 +49,27 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget emailField() {
     return TextFormField(
-      decoration: const InputDecoration(
-        label: Text("Student Email"),
-        hintText: "xxxxxxx",
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(50)),
+        decoration: const InputDecoration(
+          label: Text("Student Email"),
+          hintText: "xxxxxxx",
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(50)),
+          ),
+          contentPadding: EdgeInsets.symmetric(horizontal: 16),
+          suffix: Text("@student.cuet.ac.bd"),
         ),
-        contentPadding: EdgeInsets.symmetric(horizontal: 16),
-        suffix: Text("@student.cuet.ac.bd"),
-      ),
-      keyboardType: TextInputType.number,
-    );
+        keyboardType: TextInputType.number,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return "Please enter your Student ID";
+          }
+          if (int.tryParse(value) == null) {
+            return "Student ID must contain digits only";
+          }
+          if (value.length != 7) {
+            return "Student ID must be 7 digits long";
+          }
+        });
   }
 
   Widget passwordField() {
@@ -66,6 +83,11 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       obscureText: true,
       keyboardType: TextInputType.visiblePassword,
+      validator: (value) {
+        if (value == null || value.length < 6) {
+          return "Password must be at least 6 characters long";
+        }
+      },
     );
   }
 }
