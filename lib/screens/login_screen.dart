@@ -60,6 +60,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
         hintText: "xxxxxxx",
         border: inputBorder,
         contentPadding: EdgeInsets.symmetric(horizontal: 16),
+        prefix: Text("u"),
         suffix: Text("@student.cuet.ac.bd"),
       ),
       keyboardType: TextInputType.number,
