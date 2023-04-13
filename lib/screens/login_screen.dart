@@ -1,3 +1,4 @@
+import 'package:cuet_book/mixins/validation_mixin.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -7,7 +8,7 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -77,25 +78,5 @@ class _LoginScreenState extends State<LoginScreen> {
       keyboardType: TextInputType.visiblePassword,
       validator: passwordValidator,
     );
-  }
-
-  String? studentIdValidator(value) {
-    if (value == null || value.isEmpty) {
-      return "Please enter your Student ID";
-    }
-    if (int.tryParse(value) == null) {
-      return "Student ID must contain digits only";
-    }
-    if (value.length != 7) {
-      return "Student ID must be 7 digits long";
-    }
-    return null;
-  }
-
-  String? passwordValidator(value) {
-    if (value == null || value.length < 6) {
-      return "Password must be at least 6 characters long";
-    }
-    return null;
   }
 }
