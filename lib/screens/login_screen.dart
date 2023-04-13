@@ -49,27 +49,29 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget emailField() {
     return TextFormField(
-        decoration: const InputDecoration(
-          label: Text("Student Email"),
-          hintText: "xxxxxxx",
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(50)),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 16),
-          suffix: Text("@student.cuet.ac.bd"),
+      decoration: const InputDecoration(
+        label: Text("Student Email"),
+        hintText: "xxxxxxx",
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(50)),
         ),
-        keyboardType: TextInputType.number,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return "Please enter your Student ID";
-          }
-          if (int.tryParse(value) == null) {
-            return "Student ID must contain digits only";
-          }
-          if (value.length != 7) {
-            return "Student ID must be 7 digits long";
-          }
-        });
+        contentPadding: EdgeInsets.symmetric(horizontal: 16),
+        suffix: Text("@student.cuet.ac.bd"),
+      ),
+      keyboardType: TextInputType.number,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return "Please enter your Student ID";
+        }
+        if (int.tryParse(value) == null) {
+          return "Student ID must contain digits only";
+        }
+        if (value.length != 7) {
+          return "Student ID must be 7 digits long";
+        }
+        return null;
+      },
+    );
   }
 
   Widget passwordField() {
@@ -87,6 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (value == null || value.length < 6) {
           return "Password must be at least 6 characters long";
         }
+        return null;
       },
     );
   }
