@@ -37,10 +37,11 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           const SizedBox(height: 16),
           FilledButton(
-              onPressed: () {
-                formKey.currentState?.validate();
-              },
-              child: const Text("Login")),
+            onPressed: () {
+              formKey.currentState?.validate();
+            },
+            child: const Text("Login"),
+          ),
           const SizedBox(height: 32),
         ],
       ),
