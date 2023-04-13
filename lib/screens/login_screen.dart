@@ -47,14 +47,16 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  static const inputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(50)),
+  );
+
   Widget emailField() {
     return TextFormField(
       decoration: const InputDecoration(
         label: Text("Student Email"),
         hintText: "xxxxxxx",
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(50)),
-        ),
+        border: inputBorder,
         contentPadding: EdgeInsets.symmetric(horizontal: 16),
         suffix: Text("@student.cuet.ac.bd"),
       ),
@@ -67,9 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return TextFormField(
       decoration: const InputDecoration(
         label: Text("Password"),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(50)),
-        ),
+        border: inputBorder,
         contentPadding: EdgeInsets.symmetric(horizontal: 16),
       ),
       obscureText: true,
