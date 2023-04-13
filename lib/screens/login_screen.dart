@@ -17,14 +17,14 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Expanded(child: Container()),
-          const Center(
-            child: Text(
-              "CUETBook",
-              style: TextStyle(fontSize: 56),
+          const Expanded(
+            child: Center(
+              child: Text(
+                "CUETBook",
+                style: TextStyle(fontSize: 56),
+              ),
             ),
           ),
-          Expanded(child: Container()),
           Form(
             key: formKey,
             child: Column(
