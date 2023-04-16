@@ -1,4 +1,4 @@
-class ValidationMixin {
+mixin ValidationMixin {
   String? studentIdValidator(value) {
     if (value == null || value.isEmpty) {
       return "Please enter your Student ID";
