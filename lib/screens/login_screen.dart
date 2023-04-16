@@ -1,3 +1,4 @@
+import 'package:cuet_book/constants.dart';
 import 'package:cuet_book/mixins/validation_mixin.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 2 * kSpacing),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -22,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
             child: Center(
               child: Text(
                 "CUETBook",
-                style: TextStyle(fontSize: 56),
+                style: TextStyle(fontSize: 7 * kSpacing),
               ),
             ),
           ),
@@ -31,19 +32,19 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
             child: Column(
               children: [
                 emailField(),
-                const SizedBox(height: 16),
+                const SizedBox(height: 2 * kSpacing),
                 passwordField(),
               ],
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 2 * kSpacing),
           FilledButton(
             onPressed: () {
               formKey.currentState?.validate();
             },
             child: const Text("Login"),
           ),
-          const SizedBox(height: 32),
+          const SizedBox(height: 4 * kSpacing),
         ],
       ),
     );
@@ -59,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
         label: Text("Student Email"),
         hintText: "xxxxxxx",
         border: inputBorder,
-        contentPadding: EdgeInsets.symmetric(horizontal: 16),
+        contentPadding: EdgeInsets.symmetric(horizontal: 2 * kSpacing),
         prefix: Text("u"),
         suffix: Text("@student.cuet.ac.bd"),
       ),
@@ -73,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
       decoration: const InputDecoration(
         label: Text("Password"),
         border: inputBorder,
-        contentPadding: EdgeInsets.symmetric(horizontal: 16),
+        contentPadding: EdgeInsets.symmetric(horizontal: 2 * kSpacing),
       ),
       obscureText: true,
       keyboardType: TextInputType.visiblePassword,
