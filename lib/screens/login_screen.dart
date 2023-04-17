@@ -3,6 +3,8 @@ import 'package:cuet_book/mixins/validation_mixin.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
+  static String routeName = "/login";
+
   const LoginScreen({super.key});
 
   @override
