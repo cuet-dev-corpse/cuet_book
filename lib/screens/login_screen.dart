@@ -14,38 +14,40 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 2 * kSpacing),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          const Expanded(
-            child: Center(
-              child: Text(
-                "CUETBook",
-                style: TextStyle(fontSize: 7 * kSpacing),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 2 * kSpacing),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            const Expanded(
+              child: Center(
+                child: Text(
+                  "CUETBook",
+                  style: TextStyle(fontSize: 7 * kSpacing),
+                ),
               ),
             ),
-          ),
-          Form(
-            key: formKey,
-            child: Column(
-              children: [
-                emailField(),
-                const SizedBox(height: 2 * kSpacing),
-                passwordField(),
-              ],
+            Form(
+              key: formKey,
+              child: Column(
+                children: [
+                  emailField(),
+                  const SizedBox(height: 2 * kSpacing),
+                  passwordField(),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(height: 2 * kSpacing),
-          FilledButton(
-            onPressed: () {
-              formKey.currentState?.validate();
-            },
-            child: const Text("Login"),
-          ),
-          const SizedBox(height: 4 * kSpacing),
-        ],
+            const SizedBox(height: 2 * kSpacing),
+            FilledButton(
+              onPressed: () {
+                formKey.currentState?.validate();
+              },
+              child: const Text("Login"),
+            ),
+            const SizedBox(height: 4 * kSpacing),
+          ],
+        ),
       ),
     );
   }
