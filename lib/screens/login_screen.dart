@@ -45,6 +45,15 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
               onPressed: () {
                 formKey.currentState?.validate();
               },
+              onLongPress: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text(
+                      "You have entered the dark side. Stay safe buddy.",
+                    ),
+                  ),
+                );
+              },
               child: const Text("Login"),
             ),
             const SizedBox(height: 4 * kSpacing),
