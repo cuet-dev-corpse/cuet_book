@@ -1,3 +1,4 @@
+import 'package:cuet_book/components/rounded_text_form_field.dart';
 import 'package:cuet_book/constants.dart';
 import 'package:cuet_book/mixins/validation_mixin.dart';
 import 'package:flutter/material.dart';
@@ -34,9 +35,21 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
               key: formKey,
               child: Column(
                 children: [
-                  emailField(),
+                  RoundedTextFormField(
+                    label: const Text("Student Email"),
+                    hintText: "xxxxxxx",
+                    prefix: const Text("u"),
+                    suffix: const Text("@student.cuet.ac.bd"),
+                    keyboardType: TextInputType.number,
+                    validator: studentIdValidator,
+                  ),
                   const SizedBox(height: 2 * kSpacing),
-                  passwordField(),
+                  RoundedTextFormField(
+                    label: const Text("Password"),
+                    obscureText: true,
+                    keyboardType: TextInputType.visiblePassword,
+                    validator: passwordValidator,
+                  )
                 ],
               ),
             ),
@@ -60,38 +73,6 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
           ],
         ),
       ),
-    );
-  }
-
-  static const inputBorder = OutlineInputBorder(
-    borderRadius: BorderRadius.all(Radius.circular(50)),
-  );
-
-  Widget emailField() {
-    return TextFormField(
-      decoration: const InputDecoration(
-        label: Text("Student Email"),
-        hintText: "xxxxxxx",
-        border: inputBorder,
-        contentPadding: EdgeInsets.symmetric(horizontal: 2 * kSpacing),
-        prefix: Text("u"),
-        suffix: Text("@student.cuet.ac.bd"),
-      ),
-      keyboardType: TextInputType.number,
-      validator: studentIdValidator,
-    );
-  }
-
-  Widget passwordField() {
-    return TextFormField(
-      decoration: const InputDecoration(
-        label: Text("Password"),
-        border: inputBorder,
-        contentPadding: EdgeInsets.symmetric(horizontal: 2 * kSpacing),
-      ),
-      obscureText: true,
-      keyboardType: TextInputType.visiblePassword,
-      validator: passwordValidator,
     );
   }
 }
