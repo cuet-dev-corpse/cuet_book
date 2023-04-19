@@ -1,3 +1,4 @@
+import 'package:cuet_book/components/rounded_button.dart';
 import 'package:cuet_book/components/rounded_text_form_field.dart';
 import 'package:cuet_book/constants.dart';
 import 'package:cuet_book/mixins/validation_mixin.dart';
@@ -71,11 +72,8 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
               ],
             ),
             const SizedBox(height: 2 * kSpacing),
-            FilledButton(
-              style: FilledButton.styleFrom(
-                padding: const EdgeInsets.all(2 * kSpacing),
-              ),
-              onPressed: () {
+            RoundedButton(
+              onTap: () {
                 formKey.currentState?.validate();
               },
               onLongPress: () {
@@ -87,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
                   ),
                 );
               },
-              child: const Text("Login"),
+              label: "Login",
             ),
             const SizedBox(height: 4 * kSpacing),
           ],
