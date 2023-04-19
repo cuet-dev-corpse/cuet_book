@@ -28,8 +28,9 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
                 child: Text(
                   "C U E T I Z E N",
                   style: TextStyle(
-                      fontSize: 5 * kSpacing,
-                      color: Theme.of(context).colorScheme.secondary),
+                    fontSize: 5 * kSpacing,
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
               ),
             ),
