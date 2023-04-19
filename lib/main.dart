@@ -1,4 +1,5 @@
 import 'package:cuet_book/screens/login_screen.dart';
+import 'package:cuet_book/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,9 +20,10 @@ class MainApp extends StatelessWidget {
           secondary: const Color(0xFFba8742),
         ),
       ),
-      initialRoute: LoginScreen.routeName,
+      initialRoute: WelcomeScreen.routeName,
       routes: {
         LoginScreen.routeName: (context) => const LoginScreen(),
+        WelcomeScreen.routeName: (context) => const WelcomeScreen(),
       },
     );
   }
