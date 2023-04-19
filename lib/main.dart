@@ -13,7 +13,10 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreenAccent),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF390083),
+          secondary: const Color(0xFFba8742),
+        ),
       ),
       initialRoute: LoginScreen.routeName,
       routes: {
