@@ -23,11 +23,13 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            const Expanded(
+            Expanded(
               child: Center(
                 child: Text(
                   "CUETBook",
-                  style: TextStyle(fontSize: 7 * kSpacing),
+                  style: TextStyle(
+                      fontSize: 7 * kSpacing,
+                      color: Theme.of(context).colorScheme.secondary),
                 ),
               ),
             ),
