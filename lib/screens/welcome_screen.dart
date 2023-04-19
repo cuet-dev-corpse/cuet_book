@@ -29,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "Of, by and for the CUETians",
-                    style: Theme.of(context).textTheme.titleLarge,
+                    style: theme.textTheme.titleLarge,
                   ),
                 ],
               ),
