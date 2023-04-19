@@ -13,19 +13,18 @@ class RoundedButton extends StatelessWidget {
       onTap: onTap,
       onLongPress: onLongPress,
       child: Container(
+        alignment: Alignment.center,
         decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
           borderRadius: const BorderRadius.all(Radius.circular(50)),
         ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(2 * kSpacing),
-            child: Text(
-              label,
-              style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
-            ),
+        child: Padding(
+          padding: const EdgeInsets.all(2 * kSpacing),
+          child: Text(
+            label,
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
           ),
         ),
       ),

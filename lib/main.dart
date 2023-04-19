@@ -3,9 +3,7 @@ import 'package:cuet_book/screens/login_screen.dart';
 import 'package:cuet_book/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const MainApp());
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});

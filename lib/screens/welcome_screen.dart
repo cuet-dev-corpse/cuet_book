@@ -30,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "Of, by and for the CUETians",
-                    style: theme.textTheme.titleLarge,
+                    style: theme.textTheme.bodyLarge,
                   ),
                 ],
               ),
@@ -41,11 +41,7 @@ class WelcomeScreen extends StatelessWidget {
               },
               onLongPress: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text(
-                      "You have entered the dark side. Stay safe buddy.",
-                    ),
-                  ),
+                  const SnackBar(content: Text("Hello Hackerman")),
                 );
               },
               label: "Login with Student ID",
@@ -57,15 +53,9 @@ class WelcomeScreen extends StatelessWidget {
                 const Text("Don't have an account?"),
                 TextButton(
                   onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                        content: Text("Feature not implimented yet")));
+                    // TODO: Navigate to singup page
                   },
-                  child: Text(
-                    "Sign up",
-                    style: TextStyle(
-                      color: theme.primaryColor,
-                    ),
-                  ),
+                  child: const Text("Sign up"),
                 ),
               ],
             ),

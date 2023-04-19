@@ -67,15 +67,13 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
                 TextButton(
                   child: const Text("Sing up"),
                   onPressed: () {
-                    // Navigator.of(context)
-                    //     .popAndPushNamed(SingupScreen.routeName);
+                    // TODO: Navigate to signup page
                   },
                 ),
                 TextButton(
                   child: const Text("Forgot password"),
                   onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                        content: Text("Feature not implimented yet")));
+                    // TODO: Handle forgot password
                   },
                 ),
               ],
@@ -90,11 +88,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
               },
               onLongPress: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text(
-                      "You have entered the dark side. Stay safe buddy.",
-                    ),
-                  ),
+                  const SnackBar(content: Text("Hello Hackerman")),
                 );
               },
               label: "Login",
@@ -106,3 +100,5 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
     );
   }
 }
+
+// TODO: make the focus to login button automatic
