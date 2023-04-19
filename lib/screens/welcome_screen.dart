@@ -46,7 +46,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 );
               },
-              label: "Log in",
+              label: "Login with Student ID",
             ),
             const SizedBox(height: 2 * kSpacing),
             Row(
