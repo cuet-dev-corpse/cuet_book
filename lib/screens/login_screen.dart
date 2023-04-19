@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 2 * kSpacing),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: Center(
@@ -56,7 +56,24 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
               ),
             ),
             const SizedBox(height: 2 * kSpacing),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  child: const Text("Forgot password"),
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        content: Text("Feature not implimented yet")));
+                  },
+                ),
+                const SizedBox(width: 8),
+              ],
+            ),
+            const SizedBox(height: 2 * kSpacing),
             FilledButton(
+              style: FilledButton.styleFrom(
+                padding: const EdgeInsets.all(2 * kSpacing),
+              ),
               onPressed: () {
                 formKey.currentState?.validate();
               },
