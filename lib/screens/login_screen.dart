@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
