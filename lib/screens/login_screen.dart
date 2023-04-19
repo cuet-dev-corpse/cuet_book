@@ -30,9 +30,10 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
             Expanded(
               child: Center(
                 child: Text(
-                  "C U E T I Z E N",
+                  "CUETIZEN",
                   style: theme.textTheme.displayMedium!.copyWith(
                     color: theme.colorScheme.secondary,
+                    letterSpacing: 5,
                   ),
                 ),
               ),

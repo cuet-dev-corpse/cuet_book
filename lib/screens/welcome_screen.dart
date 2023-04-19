@@ -22,9 +22,10 @@ class WelcomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "C U E T I Z E N",
+                    "CUETIZEN",
                     style: theme.textTheme.displayMedium!.copyWith(
                       color: theme.colorScheme.secondary,
+                      letterSpacing: 5,
                     ),
                   ),
                   Text(
