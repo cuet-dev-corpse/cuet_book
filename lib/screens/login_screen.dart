@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 2 * kSpacing),
+        padding: const EdgeInsets.symmetric(horizontal: 3 * kSpacing),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
