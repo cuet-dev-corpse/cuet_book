@@ -28,3 +28,5 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+// TODO: Learn why the app does not behave properly in dark theme
