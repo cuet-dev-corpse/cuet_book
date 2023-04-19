@@ -18,6 +18,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     return Scaffold(
       body: SafeArea(
         minimum: const EdgeInsets.symmetric(horizontal: 3 * kSpacing),
@@ -28,10 +29,9 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
               child: Center(
                 child: Text(
                   "C U E T I Z E N",
-                  style: TextStyle(
-                    fontSize: 5 * kSpacing,
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
+                  style: theme.textTheme.displayMedium!.copyWith(
+                        color: theme.colorScheme.secondary,
+                      ),
                 ),
               ),
             ),
