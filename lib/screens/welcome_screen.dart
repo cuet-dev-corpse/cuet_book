@@ -10,6 +10,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       body: SafeArea(
         minimum: const EdgeInsets.symmetric(horizontal: 3 * kSpacing),
@@ -22,13 +23,13 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     "C U E T I Z E N",
-                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.secondary,
-                        ),
+                    style: theme.textTheme.displayMedium!.copyWith(
+                      color: theme.colorScheme.secondary,
+                    ),
                   ),
                   Text(
                     "Of, by and for the CUETians",
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ],
               ),
@@ -61,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                   child: Text(
                     "Sign up",
                     style: TextStyle(
-                      color: Theme.of(context).primaryColor,
+                      color: theme.primaryColor,
                     ),
                   ),
                 ),
