@@ -2,6 +2,7 @@ import 'package:cuet_book/components/rounded_button.dart';
 import 'package:cuet_book/components/rounded_text_form_field.dart';
 import 'package:cuet_book/constants.dart';
 import 'package:cuet_book/mixins/validation_mixin.dart';
+import 'package:cuet_book/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -74,7 +75,10 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
             const SizedBox(height: 2 * kSpacing),
             RoundedButton(
               onTap: () {
-                formKey.currentState?.validate();
+                if (formKey.currentState?.validate() == true) {
+                  Navigator.of(context)
+                      .restorablePushNamed(HomeScreen.routeName);
+                }
               },
               onLongPress: () {
                 ScaffoldMessenger.of(context).showSnackBar(

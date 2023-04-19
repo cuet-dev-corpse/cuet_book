@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
           secondary: const Color(0xFFba8742),
         ),
       ),
-      initialRoute: HomeScreen.routeName,
+      initialRoute: WelcomeScreen.routeName,
       routes: {
         LoginScreen.routeName: (context) => const LoginScreen(),
         WelcomeScreen.routeName: (context) => const WelcomeScreen(),

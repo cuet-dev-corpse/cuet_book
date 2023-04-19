@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: const SafeArea(
         minimum: EdgeInsets.symmetric(horizontal: 3 * kSpacing),
         child: Center(
