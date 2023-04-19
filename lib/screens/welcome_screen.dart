@@ -53,12 +53,16 @@ class WelcomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Don't have an account?"),
-                const SizedBox(width: kSpacing),
-                Text(
-                  "Sign up",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).primaryColor,
+                TextButton(
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        content: Text("Feature not implimented yet")));
+                  },
+                  child: Text(
+                    "Sign up",
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
+                    ),
                   ),
                 ),
               ],

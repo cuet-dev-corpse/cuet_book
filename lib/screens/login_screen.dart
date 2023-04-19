@@ -62,14 +62,13 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                GestureDetector(
+                TextButton(
                   child: const Text("Forgot password"),
-                  onTap: () {
+                  onPressed: () {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text("Feature not implimented yet")));
                   },
                 ),
-                const SizedBox(width: 8),
               ],
             ),
             const SizedBox(height: 2 * kSpacing),
