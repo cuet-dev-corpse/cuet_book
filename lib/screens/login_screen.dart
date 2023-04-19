@@ -62,8 +62,15 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
             ),
             const SizedBox(height: 2 * kSpacing),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                TextButton(
+                  child: const Text("Sing up"),
+                  onPressed: () {
+                    // Navigator.of(context)
+                    //     .popAndPushNamed(SingupScreen.routeName);
+                  },
+                ),
                 TextButton(
                   child: const Text("Forgot password"),
                   onPressed: () {
