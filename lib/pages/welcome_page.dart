@@ -1,12 +1,12 @@
 import 'package:cuet_book/components/rounded_button.dart';
 import 'package:cuet_book/constants.dart';
-import 'package:cuet_book/screens/login_screen.dart';
+import 'package:cuet_book/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomePage extends StatelessWidget {
   static const routeName = "/welcome";
 
-  const WelcomeScreen({super.key});
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             RoundedButton(
               onTap: () {
-                Navigator.of(context).pushNamed(LoginScreen.routeName);
+                Navigator.of(context).pushNamed(LoginPage.routeName);
               },
               onLongPress: () {
                 ScaffoldMessenger.of(context).showSnackBar(

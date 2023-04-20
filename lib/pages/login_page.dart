@@ -2,19 +2,19 @@ import 'package:cuet_book/components/rounded_button.dart';
 import 'package:cuet_book/components/rounded_text_form_field.dart';
 import 'package:cuet_book/constants.dart';
 import 'package:cuet_book/mixins/validation_mixin.dart';
-import 'package:cuet_book/screens/home_screen.dart';
+import 'package:cuet_book/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginPage extends StatefulWidget {
   static const routeName = "/login";
 
-  const LoginScreen({super.key});
+  const LoginPage({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
+class _LoginPageState extends State<LoginPage> with ValidationMixin {
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -82,8 +82,7 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixin {
             RoundedButton(
               onTap: () {
                 if (formKey.currentState?.validate() == true) {
-                  Navigator.of(context)
-                      .restorablePushNamed(HomeScreen.routeName);
+                  Navigator.of(context).restorablePushNamed(HomePage.routeName);
                 }
               },
               onLongPress: () {
