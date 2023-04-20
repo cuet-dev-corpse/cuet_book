@@ -7,6 +7,9 @@ mixin ValidationMixin {
     if (parsedInt == null) {
       return "Student ID must contain digits only";
     }
+    if (parsedInt < 0) {
+      return "Negative student ID? Seriously?!";
+    }
     if (value.length != 7) {
       return "Student ID must be 7 digits long";
     }
