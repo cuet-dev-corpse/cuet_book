@@ -1,3 +1,4 @@
+import 'package:cuet_book/color_schemes.g.dart';
 import 'package:cuet_book/pages/home_page.dart';
 import 'package:cuet_book/pages/login_page.dart';
 import 'package:cuet_book/pages/welcome_page.dart';
@@ -12,13 +13,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF390083),
-          secondary: const Color(0xFFba8742),
-        ),
-      ),
+      theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
+      // TODO: Learn why the app does not behave properly in dark theme
+      // darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
       initialRoute: WelcomePage.routeName,
       routes: {
         LoginPage.routeName: (context) => const LoginPage(),
@@ -28,5 +25,3 @@ class MainApp extends StatelessWidget {
     );
   }
 }
-
-// TODO: Learn why the app does not behave properly in dark theme
