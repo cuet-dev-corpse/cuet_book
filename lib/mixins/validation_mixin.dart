@@ -3,7 +3,8 @@ mixin ValidationMixin {
     if (value == null || value.isEmpty) {
       return "Please enter your Student ID";
     }
-    if (int.tryParse(value) == null) {
+    int? parsedInt = int.tryParse(value);
+    if (parsedInt == null) {
       return "Student ID must contain digits only";
     }
     if (value.length != 7) {
