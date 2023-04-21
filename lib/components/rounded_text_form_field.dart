@@ -1,38 +1,40 @@
-import 'package:cuet_book/constants.dart';
 import 'package:flutter/material.dart';
 
 class RoundedTextFormField extends StatelessWidget {
   const RoundedTextFormField({
     super.key,
     this.validator,
-    this.suffix,
-    this.prefix,
     this.hintText,
-    this.label,
+    this.labelText,
     this.keyboardType,
     this.obscureText = false,
+    this.prefixIcon,
+    this.suffixText,
+    this.prefixText,
   });
 
   final String? Function(String?)? validator;
-  final Widget? suffix;
-  final Widget? prefix;
+  final String? suffixText;
+  final String? prefixText;
   final String? hintText;
-  final Widget? label;
+  final String? labelText;
   final TextInputType? keyboardType;
   final bool obscureText;
+  final Icon? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        label: label,
+        isDense: true,
+        labelText: labelText,
+        prefixText: prefixText,
+        suffixText: suffixText,
         hintText: hintText,
         border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(50)),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 2 * kSpacing),
-        prefix: prefix,
-        suffix: suffix,
+        prefixIcon: prefixIcon,
       ),
       keyboardType: keyboardType,
       validator: validator,

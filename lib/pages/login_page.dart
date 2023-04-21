@@ -43,17 +43,19 @@ class _LoginPageState extends State<LoginPage> with ValidationMixin {
               child: Column(
                 children: [
                   RoundedTextFormField(
-                    label: const Text("Student Email"),
+                    labelText: "Student Email",
                     hintText: "xxxxxxx",
-                    prefix: const Text("u"),
-                    suffix: const Text("@student.cuet.ac.bd"),
+                    prefixText: "u",
+                    suffixText: "@student.cuet.ac.bd",
+                    prefixIcon: const Icon(Icons.alternate_email_rounded),
                     keyboardType: TextInputType.number,
                     validator: studentIdValidator,
                   ),
                   const SizedBox(height: 2 * kSpacing),
                   RoundedTextFormField(
-                    label: const Text("Password"),
+                    labelText: "Password",
                     obscureText: true,
+                    prefixIcon: const Icon(Icons.lock_open_rounded),
                     keyboardType: TextInputType.visiblePassword,
                     validator: passwordValidator,
                   )
