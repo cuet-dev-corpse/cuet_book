@@ -14,8 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
-      // TODO: Learn why the app does not behave properly in dark theme
-      // darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
+      darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
       initialRoute: WelcomePage.routeName,
       routes: {
         LoginPage.routeName: (context) => const LoginPage(),
